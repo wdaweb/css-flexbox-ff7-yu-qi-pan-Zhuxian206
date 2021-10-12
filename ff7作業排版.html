@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <title>Final Fantasy VII</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans Display', sans-serif;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      background: url("./img/bg-full.jpg")no-repeat center center/cover;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 70%);
+    }
+
+    .wrap {
+      display: flex;
+      justify-content: space-evenly;
+      height: 75%;
+      width: 75%;
+      border: 1px solid #777;
+      z-index: 500;
+    }
+
+    .col-1 {
+      position: relative;
+      display: flex;
+      width: 50%;
+      color: white;
+      background: url("./img/main.jpg")no-repeat center center/cover;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+
+    .bl-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .col-1 img {
+      width: 30%;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5))
+    }
+
+    .col-1 p {
+      width: 75%;
+    }
+
+    .col-1 p,
+    h2 {
+      z-index: 999;
+    }
+
+    .col-2 {
+      display: flex;
+      width: 50%;
+      background-color: rgb(54, 32, 178);
+      flex-direction: column;
+    }
+
+    .cloud {
+      box-sizing: border-box;
+      display: flex;
+      height: 50%;
+      background-color: #9e9595;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 3% 0 7%;
+    }
+
+    .cloud img {
+      height: 85%;
+    }
+
+    .cloud-word {
+      justify-content: center;
+      align-self: center;
+    }
+
+
+    .tifa {
+      height: 50%;
+      background-color: #000;
+      color: white;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      padding: 0 7% 0 3%;
+    }
+
+    .tifa img {
+      height: 85%;
+    }
+
+    .tifa-word {
+      justify-content: center;
+      align-self: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="col-1">
+        <div class="bl-bg"></div>
+        <img src="./img/ps4-ff7.png" alt="">
+        <h2>AVAILABLE NOW</h2>
+        <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, iure magni fugit rerum exercitationem labore
+          quisquam hic molestias excepturi placeat, voluptatum inventore veniam perferendis nam eum illum deserunt
+          laudantium ullam?</P>
+      </div>
+      <div class="col-2">
+        <div class="cloud">
+          <div class="cloud-word">
+            <h2>Cloud</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi omnis quod eius inventore
+              corrupti.Voluptatum iste earum incidunt odit optio reiciendis, ea dicta ipsam quia corrupti odio nihil qui
+              hic.</p>
+          </div>
+          <img src="./img/cloud.png" alt="">
+        </div>
+        <div class="tifa">
+          <img src="./img/tifa.png" alt="">
+          <div class="tifa-word">
+            <h2>Tifa</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos at vel possimus. Velit
+              consequatur qui hic natus odio rerum voluptatum! Similique excepturi debitis exercitationem repudiandae
+              accusantium fugiat neque minus.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

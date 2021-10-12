@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "標楷體";
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .pan {
+      position: relative;
+      height: 550px;
+      width: 500px;
+      border: 1px solid #000;
+    }
+
+    .wordLeftRight {
+      writing-mode: vertical-lr;
+      font-size: 1.8rem;
+      margin: 1.5%;
+    }
+
+    .lineBlock {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 85%;
+      height: 85%;
+      /* border: 1px solid #000; */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .sBlock {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+
+    .sline {
+      width: 1px;
+      height: 100%;
+      background-color: #000;
+    }
+
+    .sline:nth-child(1),
+    :nth-child(9) {
+      z-index: 1;
+    }
+
+    .fBlock {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+    }
+
+    .fline {
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+
+    .centerbBar {
+      position: absolute;
+      align-self: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+      background-color: white;
+      border: 1px solid #000;
+      border-left: 0;
+      border-right: 0;
+      font-size: 2rem;
+    }
+
+    .xline {
+      position: absolute;
+      width: 1px;
+      height: 32%;
+      background-color: #000;
+      top: 0%;
+      left: 50%;
+      transform: translate(0%, -15%) rotate(45deg);
+    }
+
+    .xline-2 {
+      position: absolute;
+      width: 1px;
+      height: 32%;
+      background-color: #000;
+      top: 0%;
+      left: 50%;
+      transform: translate(0%, -15%) rotate(135deg);
+    }
+
+    .xline-d {
+      position: absolute;
+      width: 1px;
+      height: 32%;
+      background-color: #000;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(0%, 15%) rotate(45deg);
+    }
+
+    .xline-2-d {
+      position: absolute;
+      width: 1px;
+      height: 32%;
+      background-color: #000;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(0%, 15%) rotate(135deg);
+    }
+
+    .chessTop {
+      position: absolute;
+      width: 110%;
+      height: 55%;
+      top: -5%;
+      /* background-color: rgba(255, 0, 0, 0.413); */
+    }
+
+    .chessBottom {
+      position: absolute;
+      width: 110%;
+      height: 55%;
+      bottom: -5%;
+      /* background-color: rgba(0, 0, 255, 0.242); */
+      color: red;
+    }
+
+    .chess-1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bc {
+      width: 40px;
+      height: 40px;
+      font-size: 1.7rem;
+      background-color: white;
+      border: 1px solid #000;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      z-index: 10;
+    }
+
+    .chess-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14% 11.5%;
+    }
+
+    .chess-3 {
+      position: relative;
+      top: -21%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chess-4 {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 11.5%;
+    }
+
+    .chess-5 {
+      display: flex;
+      justify-content: space-between;
+      padding: 2% 11.5%;
+    }
+
+    .chess-6 {
+      display: flex;
+      justify-content: space-between;
+      padding: 11.5% 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wordLeftRight">棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</div>
+    <div class="pan">
+      <div class="lineBlock">
+        <div class="centerbBar">
+          <p>楚河</p>
+          <p>漢界</p>
+        </div>
+        <div class="sBlock">
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+          <div class="sline"></div>
+        </div>
+        <div class="fBlock">
+          <div class="fline"></div>
+          <div class="fline"></div>
+          <div class="fline"></div>
+          <div class="fline" style="margin-bottom: 23%;"></div>
+          <div class="fline"></div>
+          <div class="fline"></div>
+          <div class="fline"></div>
+          <div class="fline"></div>
+        </div>
+        <div class="xline"></div>
+        <div class="xline-2"></div>
+        <div class="xline-d"></div>
+        <div class="xline-2-d"></div>
+        <div class="chessTop">
+          <div class="chess-1">
+            <div class="bc">車</div>
+            <div class="bc">馬</div>
+            <div class="bc">象</div>
+            <div class="bc">士</div>
+            <div class="bc">將</div>
+            <div class="bc">士</div>
+            <div class="bc">象</div>
+            <div class="bc">馬</div>
+            <div class="bc">車</div>
+          </div>
+          <div class="chess-2">
+            <div class="bc">包</div>
+            <div class="bc">包</div>
+          </div>
+          <div class="chess-3">
+            <div class="bc">卒</div>
+            <div class="bc">卒</div>
+            <div class="bc">卒</div>
+            <div class="bc">卒</div>
+            <div class="bc">卒</div>
+          </div>
+        </div>
+        <div class="chessBottom">
+          <div class="chess-4">
+            <div class="bc">兵</div>
+            <div class="bc">兵</div>
+            <div class="bc">兵</div>
+            <div class="bc">兵</div>
+            <div class="bc">兵</div>
+          </div>
+          <div class="chess-5">
+            <div class="bc">炮</div>
+            <div class="bc">炮</div>
+          </div>
+          <div class="chess-6">
+            <div class="bc">俥</div>
+            <div class="bc">傌</div>
+            <div class="bc">相</div>
+            <div class="bc">仕</div>
+            <div class="bc">帥</div>
+            <div class="bc">仕</div>
+            <div class="bc">相</div>
+            <div class="bc">傌</div>
+            <div class="bc">俥</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wordLeftRight">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</div>
+  </div>
+</body>
+
+</html>
